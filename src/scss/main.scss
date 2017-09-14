@@ -1,0 +1,19 @@
+@import "vendor/normalize";
+@import "variables";
+@import "mixins";
+@import "grid";
+
+header, main {
+  padding: 0 ($gutter * 2);
+
+  &:not(:last-child) {
+    margin-bottom: $gutter;
+  }
+}
+
+.info {
+  padding: 1.25rem 0;
+  position: relative;
+  text-align: center;
+  background-color: $blue-lighten;
+}

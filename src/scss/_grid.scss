@@ -1,0 +1,36 @@
+.container {
+  margin: 0 auto;
+
+  &.is-fluid {
+    max-width: 100%;
+  }
+
+  @include tablet {
+    max-width: calc(#{$break-tablet} - #{$gutter} * 2);
+  }
+
+  @include desktop {
+    max-width: calc(#{$break-desktop} - #{$gutter} * 2);
+  }
+
+  @include wide-desktop {
+    max-width: calc(#{$break-wide-desktop} - #{$gutter} * 2);
+  }
+}
+
+.row {
+  margin: -$gutter -$gutter 0 -$gutter;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter;
+  }
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.column {
+  flex: 1 1 0;
+  padding: $gutter;
+}

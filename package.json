@@ -1,0 +1,44 @@
+{
+  "name": "scss-babel-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "browserlist": [
+    "> 1%",
+    "ie > 9"
+  ],
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack",
+    "production": "NODE_ENV=production webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "img-loader": "^2.0.0",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
