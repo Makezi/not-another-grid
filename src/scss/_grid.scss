@@ -22,8 +22,12 @@
     margin-bottom: $gutter / 2;
   }
 
-  @include tablet {
+  &.is-mobile {
     display: flex;
+  }
+
+  @include tablet {
+    display: flex
   }
 }
 
