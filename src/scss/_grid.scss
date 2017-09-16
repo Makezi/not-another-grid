@@ -1,28 +1,25 @@
 .container {
+  max-width: $break-tablet - $gutter * 2;
   margin: 0 auto;
 
-  &.is-fluid {
+  &-fluid {
     max-width: 100%;
   }
 
   @include tablet {
-    max-width: calc(#{$break-tablet} - #{$gutter} * 2);
+    max-width: $break-desktop - $gutter * 2;
   }
 
   @include desktop {
-    max-width: calc(#{$break-desktop} - #{$gutter} * 2);
-  }
-
-  @include wide-desktop {
-    max-width: calc(#{$break-wide-desktop} - #{$gutter} * 2);
+    max-width: $break-wide-desktop - $gutter * 2;
   }
 }
 
 .row {
-  margin: -$gutter -$gutter 0 -$gutter;
+  margin: -$gutter / 2;
 
   &:not(:last-child) {
-    margin-bottom: $gutter;
+    margin-bottom: $gutter / 2;
   }
 
   @include tablet {
@@ -30,7 +27,45 @@
   }
 }
 
-.column {
-  flex: 1 1 0;
-  padding: $gutter;
+.col {
+  flex: 1;
+  padding: $gutter / 2;
+
+  &:not(:last-child) {
+    padding: -$gutter / 2;
+  }
+
+  &-debug {
+    @extend .col;
+    margin: $gutter / 2;
+    height: 80px;
+    background-color: $purple-lighten;
+  }
+
+  &.is-3of4 {
+    flex: 0 0 percentage(3/4);
+  }
+
+  &.is-2of3 {
+    flex: 0 0 percentage(2/3);
+  }
+
+  &.is-1of2 {
+    flex: 0 0 percentage(1/2);
+  }
+
+  &.is-1of3 {
+    flex: 0 0 percentage(1/3);
+  }
+
+  &.is-1of4 {
+    flex: 0 0 percentage(1/4);
+  }
+
+  @for $i from 2 through 11 {
+    &-#{$i} {
+      @extend .col;
+      flex: 0 0 percentage(($i/12));
+    }
+  }
 }
