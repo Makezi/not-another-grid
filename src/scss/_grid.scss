@@ -27,7 +27,15 @@
   }
 
   @include tablet {
-    display: flex
+    &:not(.is-desktop) {
+      display: flex;
+    }
+  }
+
+  @include desktop {
+    &.is-desktop {
+      display: flex;
+    }
   }
 }
 
