@@ -3,6 +3,10 @@
   margin: 0 auto;
   border: 1px solid red;
 
+  &-fluid {
+    max-width: 100%;
+  }
+
   @include tablet {
     max-width: $break-desktop;;
   }
@@ -13,6 +17,18 @@
 }
 
 .row {
+  &.align-top {
+    align-items: flex-start;
+  }
+
+  &.align-bottom {
+    align-items: flex-end;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+
   &.is-mobile {
     display: flex;
 
@@ -44,6 +60,18 @@
   flex: 1 1 0;
   border: 1px solid blue;
   margin-bottom: $gutter;
+
+  &.align-top {
+    align-self: flex-start;
+  }
+
+  &.align-bottom {
+    align-self: flex-end;
+  }
+
+  &.align-center {
+    align-self: center;
+  }
 
   &.is-half {
     flex: 0 0 calc(1/2 * 100% - (1 - 1/2) * #{$gutter});
