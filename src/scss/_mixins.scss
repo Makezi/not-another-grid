@@ -10,8 +10,8 @@
   }
 }
 
-@mixin wide-desktop {
-  @media (min-width: #{$break-wide-desktop}){
-    @content;
-  }
-}
+// @mixin wide-desktop {
+//   @media (min-width: #{$break-wide-desktop}){
+//     @content;
+//   }
+// }

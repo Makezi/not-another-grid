@@ -1,83 +1,65 @@
 .container {
-  max-width: $break-tablet - $gutter * 2;
+  max-width: $break-tablet;
   margin: 0 auto;
-
-  &-fluid {
-    max-width: 100%;
-  }
+  border: 1px solid red;
 
   @include tablet {
-    max-width: $break-desktop - $gutter * 2;
+    max-width: $break-desktop;;
   }
 
   @include desktop {
-    max-width: $break-wide-desktop - $gutter * 2;
+    max-width: $break-wide-desktop;
   }
 }
 
 .row {
-  margin: -$gutter / 2;
-
-  &:not(:last-child) {
-    margin-bottom: $gutter / 2;
-  }
-
   &.is-mobile {
     display: flex;
+
+    > .col:not(:last-child) {
+      margin-right: $gutter;
+    }
   }
 
   @include tablet {
     &:not(.is-desktop) {
       display: flex;
+
+      > .col:not(:last-child) {
+        margin-right: $gutter;
+      }
     }
   }
 
   @include desktop {
-    &.is-desktop {
-      display: flex;
+    display: flex;
+
+    > .col:not(:last-child) {
+      margin-right: $gutter;
     }
   }
 }
 
 .col {
-  flex: 1;
-  padding: $gutter / 2;
+  flex: 1 1 0;
+  border: 1px solid blue;
+  margin-bottom: $gutter;
 
-  &:not(:last-child) {
-    padding: -$gutter / 2;
+  &.is-half {
+    flex: 0 0 calc(1/2 * 100% - (1 - 1/2) * #{$gutter});
   }
 
-  &-debug {
-    @extend .col;
-    margin: $gutter / 2;
-    height: 80px;
-    background-color: $purple-lighten;
+  &.is-one-third {
+    flex: 0 0 calc(1/3 * 100% - (1 - 1/3) * #{$gutter});
   }
 
-  &.is-3of4 {
-    flex: 0 0 percentage(3/4);
+  &.is-one-quarter {
+    flex: 0 0 calc(1/4 * 100% - (1 - 1/4) * #{$gutter});
   }
+}
 
-  &.is-2of3 {
-    flex: 0 0 percentage(2/3);
-  }
-
-  &.is-1of2 {
-    flex: 0 0 percentage(1/2);
-  }
-
-  &.is-1of3 {
-    flex: 0 0 percentage(1/3);
-  }
-
-  &.is-1of4 {
-    flex: 0 0 percentage(1/4);
-  }
-
-  @for $i from 2 through 11 {
-    &-#{$i} {
-      @extend .col;
-      flex: 0 0 percentage(($i/12));
-    }
-  }
+.col-debug {
+  @extend .col;
+  height: 4rem;
+  background-color: $purple-lighten;
 }

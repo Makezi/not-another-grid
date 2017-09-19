@@ -1,5 +1,4 @@
-// $gutter: 0.75rem;
-$gutter: 30px;
+$gutter: 0.75rem; // 12px
 
 $blue-lighten: #64b5f6;
 $purple-lighten: rgba(0, 0, 255, 0.25);
@@ -7,8 +6,9 @@ $yellow-lighten: #FF9800;
 $white: white;
 
 $font-family: Helvetica;
-$font-size: 1rem;
+$font-size: 1rem; // 16px
 
-$break-tablet: 768px;
-$break-desktop: 992px;
-$break-wide-desktop: 1200px;
+$break-mobile: 36rem; // 576px
+$break-tablet: 48rem; // 768px
+$break-desktop: 62rem; // 992px
+$break-wide-desktop: 75rem; // 1200px
