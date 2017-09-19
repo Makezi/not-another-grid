@@ -1,21 +1,3 @@
-.container {
-  max-width: $break-tablet;
-  margin: 0 auto;
-  border: 1px solid red;
-
-  &-fluid {
-    max-width: 100%;
-  }
-
-  @include tablet {
-    max-width: $break-desktop;;
-  }
-
-  @include desktop {
-    max-width: $break-wide-desktop;
-  }
-}
-
 .row {
   &.align-top {
     align-items: flex-start;

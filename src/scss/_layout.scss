@@ -1,9 +1,16 @@
-html {
-  box-sizing: border-box;
-}
+.container {
+  max-width: $break-tablet;
+  margin: 0 auto;
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+  &-fluid {
+    max-width: 100%;
+  }
+
+  @include tablet {
+    max-width: $break-desktop;;
+  }
+
+  @include desktop {
+    max-width: $break-wide-desktop;
+  }
 }
