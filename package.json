@@ -2,7 +2,6 @@
   "name": "not-another-grid",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "browserlist": [
     "> 1%",
     "ie > 9"
@@ -18,8 +17,8 @@
     "production": "NODE_ENV=production webpack"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Marko Djordjevic",
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "babel-core": "^6.26.0",

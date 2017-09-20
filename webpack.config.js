@@ -10,7 +10,7 @@ var inProduction = (process.env.NODE_ENV === 'production');
 module.exports = {
   entry: {
     main: [
-      './src/js/main.js',
+      // './src/js/main.js',
       './src/scss/main.scss'
     ]
   },
