@@ -1,14 +1,11 @@
 $gutter: 0.75rem; // 12px
 
-$blue-lighten: #64b5f6;
-$purple-lighten: rgba(0, 0, 255, 0.25);
-$yellow-lighten: #FF9800;
-$white: white;
+$primary-color: rgba(112, 142, 157, 0.75);
+$secondary-color: rgb(244, 243, 241);
 
 $font-family: Helvetica;
 $font-size: 1rem; // 16px
 
-$break-mobile: 36rem; // 576px
 $break-tablet: 48rem; // 768px
 $break-desktop: 62rem; // 992px
 $break-wide-desktop: 75rem; // 1200px
