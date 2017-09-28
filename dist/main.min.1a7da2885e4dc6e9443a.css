@@ -105,9 +105,17 @@ a {
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
 
+b {
+  font-weight: inherit;
+}
+
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
+
+b {
+  font-weight: bolder;
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -469,6 +477,12 @@ h1,h2,h3,h4,h5,h6,p,li {
   }
 }
 
+@media (min-width: 75rem) {
+  .header__title {
+    padding-left: 0;
+  }
+}
+
 .header__subtitle {
   font-size: 0.8rem;
   text-align: center;
@@ -481,6 +495,12 @@ h1,h2,h3,h4,h5,h6,p,li {
     text-align: left;
     padding-left: 1rem;
     margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 75rem) {
+  .header__subtitle {
+    padding-left: 0;
   }
 }
 
