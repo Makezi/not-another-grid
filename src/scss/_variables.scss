@@ -1,10 +1,15 @@
-$gutter: 0.5rem; // 12px
+$gutter: 0.75rem; // 12px
 
-$primary-color: rgba(112, 142, 157, 0.75);
-$secondary-color: rgb(244, 243, 241);
+// Color palette
+$light-pinkpurple: rgba(158, 120, 143, 1);
+$light-bluegrey: rgba(169, 179, 206, 1);
+$light-white: rgba(254, 255, 254, 1);
+$medium-bluepurple: rgba(114, 132, 168, 1);
+$dark-bluetint: rgba(71, 73, 84, 1);
+$highlight-color: rgba($light-bluegrey, 0.3);
 
-$font-family: Helvetica;
-$font-size: 0.5rem; // 16px
+$font-family: 'Nunito Sans', sans-serif;
+$line-height: 1.5rem;
 
 $break-tablet: 48rem; // 768px
 $break-desktop: 62rem; // 992px

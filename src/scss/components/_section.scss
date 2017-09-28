@@ -1,0 +1,27 @@
+.section {
+  &__title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: $medium-bluepurple;
+
+    @include tablet {
+      font-size: 1.75rem;
+
+    }
+  }
+
+  & * a {
+    color: $medium-bluepurple;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__info {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  &__list {
+    padding-left: 2rem;
+  }
+}

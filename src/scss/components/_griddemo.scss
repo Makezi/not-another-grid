@@ -1,0 +1,25 @@
+.griddemo {
+  margin-top: 1rem;
+
+  &__col {
+    background-color: $light-pinkpurple;
+    color: $light-white;
+    text-align: center;
+    padding: 0.25rem 0.1rem;
+    border-radius: 0.5rem;
+
+    @include tablet {
+      padding: 0.5rem 0.25rem;
+    }
+  }
+
+  &__pre {
+    background-color: $highlight-color;
+    color: $medium-bluepurple;
+    padding-left: 1rem;
+    font-size: 1rem;
+    overflow: auto;
+    overflow-y: hidden;
+    margin: 0.75rem 0 0 0;
+  }
+}

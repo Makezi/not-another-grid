@@ -4,229 +4,262 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Not Another Grid!</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+  <title>Not Another Grid</title>
 </head>
 <body>
 
-  <header>
-    <div class="container-fluid">
-      <h1>NOT ANOTHER GRID</h1>
-      <h2>A grid made using CSS flexbox</h2>
+  <header class="header">
+    <div class="container">
+      <h1 class="header__title">Not Another Grid</h1>
+      <h2 class="header__subtitle">Just another CSS grid made using flexbox</h2>
     </div>
   </header>
 
-  <main>
+  <main class="content">
     <div class="container">
-      <section>
-        <h3>Basics</h3>
-        <p>Building a responsive grid layout is simple (I think...):</p>
-        <ol>
-          <li>Add a <strong>.row</strong> container, surrounding your columns</li>
-          <li>Add as many <strong>.col</strong> elements as you want</li>
+      <section class="section">
+        <h3 class="section__title">Basics</h3>
+        <p class="section__info">Building a responsive grid layout is simple:</p>
+
+        <ol class="section__list">
+          <li class="section__list--item">Add the <code class="code">.row</code> class as a container, surrounding your columns</li>
+          <li class="section__list--item">Add as many <code class="code">.col</code> elements as you want</li>
         </ol>
-        <p>Each column will have equal width, no matter how many columns you insert into the row.</p>
 
-        <div class="row">
-          <div class="col">
-            <div class="info">First</div>
-          </div>
-          <div class="col">
-            <div class="info">Second</div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col">
-            <div class="info">First</div>
-          </div>
-          <div class="col">
-            <div class="info">Second</div>
-          </div>
-          <div class="col">
-            <div class="info">Third</div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col">
-            <div class="info">First</div>
-          </div>
-          <div class="col">
-            <div class="info">Second</div>
-          </div>
-          <div class="col">
-            <div class="info">Third</div>
-          </div>
-          <div class="col">
-            <div class="info">Fourth</div>
-          </div>
-        </div>
-
-        <p>ADD CODE SNIPPET HERE</p>
-
-        <p>If you want equal height add the class <strong>full-height</strong> to the column.</p>
-
-        <div class="row">
-          <div class="col">
-            <div class="info">This class doens't have full-width added... figures</div>
-          </div>
-          <div class="col">
-            <div class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget sapien vel metus placerat sagittis. Pellentesque facilisis aliquet scelerisque. Aliquam sagittis venenatis dolor sit amet eleifend.</div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col full-height">
-            <div class="info">This class DOES!</div>
-          </div>
-          <div class="col full-height">
-            <div class="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget sapien vel metus placerat sagittis. Pellentesque facilisis aliquet scelerisque. Aliquam sagittis venenatis dolor sit amet eleifend.</div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h3>Sizes</h3>
-        <p>You can individually change the size of a single column with the following classes:</p>
-        <ul>
-          <li>.col-half</li>
-          <li>.col-one-third</li>
-          <li>.col-two-thirds</li>
-          <li>.col-one-quarter</li>
-          <li>.col-three-quarters</li>
-        </ul>
-        <p>Default columns will divide the remaining space automatically.</p>
-
-        <div class="row">
-          <div class="col-half">
-            <div class="info">.col-half</div>
-          </div>
-          <div class="col">
-            <div class="info">Auto</div>
-          </div>
-          <div class="col">
-            <div class="info">Auto</div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-one-third">
-            <div class="info">.col-one-third</div>
-          </div>
-          <div class="col">
-            <div class="info">Auto</div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-two-thirds">
-            <div class="info">.col-two-thirds</div>
-          </div>
-          <div class="col">
-            <div class="info">Auto</div>
-          </div>
-          <div class="col">
-            <div class="info">Auto</div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-one-quarter">
-            <div class="info">.col-one-quarter</div>
-          </div>
-          <div class="col">
-            <div class="info">Auto</div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-three-quarters">
-            <div class="info">.col-three-quarters</div>
-          </div>
-          <div class="col">
-            <div class="info">Auto</div>
-          </div>
-          <div class="col">
-            <div class="info">Auto</div>
-          </div>
-        </div>
-
-        <p>CODE SNIPPET HERE</p>
-      </section>
-
-      <section>
-        <h3>Responsive</h3>
-        <p>Columns work on mobile by default. If you want columns to be full width (stacked) at tablet onwards then change <strong>.row</strong> to <strong>.row-tablet</strong>. For example, the below columns should be full width until resized above 48rem. Resize your browser to see it in ACTION!</p>
-
-        <div class="row-tablet">
-          <div class="col-half">
-            <div class="info">.row-tablet / .col-half</div>
-          </div>
-          <div class="col-half">
-            <div class="info">.row-tablet / .col-half</div>
-          </div>
-        </div>
-
-        <p>Again, if you only want columns on desktop (or wide-desktop), you can use either <strong>.row-desktop</strong> or <strong>.row-wide-destkop</strong>.</p>
-
-        <div class="row-desktop">
-          <div class="col-one-third">
-            <div class="info">.row-desktop / .col-one-third</div>
-          </div>
-          <div class="col">
-            <div class="info">.row-desktop / Auto</div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h3>Nesting</h3>
-        <p>Rows can be nested within other columns infinitely.</p>
-
-        <div class="row">
-          <div class="col">
-            <div class="info">First</div>
+        <p class="section__info">Each column will have equal width, no matter how many columns you insert into the row.</p>
+        <div class="griddemo">
             <div class="row">
               <div class="col">
-                <div class="info">Nested</div>
+                <div class="griddemo__col">First</div>
               </div>
               <div class="col">
-                <div class="info">Nested</div>
+                <div class="griddemo__col">Second</div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col">
+                <div class="griddemo__col">First</div>
+              </div>
+              <div class="col">
+                <div class="griddemo__col">Second</div>
+              </div>
+              <div class="col">
+                <div class="griddemo__col">Third</div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col">
+                <div class="griddemo__col">First</div>
+              </div>
+              <div class="col">
+                <div class="griddemo__col">Second</div>
+              </div>
+              <div class="col">
+                <div class="griddemo__col">Third</div>
+              </div>
+              <div class="col">
+                <div class="griddemo__col">Fourth</div>
+              </div>
+            </div>
+<pre class="griddemo__pre">
+<code>
+&lt;div class="row"&gt;
+  &lt;div class="col"&gt;First&lt;/div&gt;
+  &lt;div class="col"&gt;Second&lt;/div&gt;
+  &lt;div class="col"&gt;Third&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+        </div>
+        <p class="section__info">If you want equal height add the class <code class="code">.full-height</code> to the column.</p>
+
+        <div class="griddemo">
+          <div class="row">
+            <div class="col">
+              <div class="griddemo__col">This class doens't have full-height added...</div>
+            </div>
+            <div class="col">
+              <div class="griddemo__col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget sapien vel metus placerat sagittis. Pellentesque facilisis aliquet scelerisque. Aliquam sagittis venenatis dolor sit amet eleifend.</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col full-height">
+              <div class="griddemo__col">However this one DOES!</div>
+            </div>
+            <div class="col full-height">
+              <div class="griddemo__col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget sapien vel metus placerat sagittis. Pellentesque facilisis aliquet scelerisque. Aliquam sagittis venenatis dolor sit amet eleifend.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section">
+        <h3 class="section__title">Sizes</h3>
+        <p class="section__info">You can individually change the size of a single column with the following classes:</p>
+
+        <ul class="section__list">
+          <li class="section__list--item"><code class="code">.col-half</code></li>
+          <li class="section__list--item"><code class="code">.col-one-third</code></li>
+          <li class="section__list--item"><code class="code">.col-two-thirds</code></li>
+          <li class="section__list--item"><code class="code">.col-one-quarter</code></li>
+          <li class="section__list--item"><code class="code">.col-three-quarters</code></li>
+        </ul>
+
+        <p class="section__info">Default columns will divide the remaining space automatically.</p>
+        
+        <div class="griddemo">
+          <div class="row">
+            <div class="col-half full-height">
+              <div class="griddemo__col">.col-half</div>
+            </div>
+            <div class="col full-height">
+              <div class="griddemo__col">Auto</div>
+            </div>
+            <div class="col full-height">
+              <div class="griddemo__col">Auto</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-one-third full-height">
+              <div class="griddemo__col">.col-one-third</div>
+            </div>
+            <div class="col full-height">
+              <div class="griddemo__col">Auto</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-two-thirds full-height">
+              <div class="griddemo__col">.col-two-thirds</div>
+            </div>
+            <div class="col full-height">
+              <div class="griddemo__col">Auto</div>
+            </div>
+            <div class="col full-height">
+              <div class="griddemo__col">Auto</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-one-quarter full-height">
+              <div class="griddemo__col">.col-one-quarter</div>
+            </div>
+            <div class="col full-height">
+              <div class="griddemo__col">Auto</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-three-quarters full-height">
+              <div class="griddemo__col">.col-three-quarters</div>
+            </div>
+            <div class="col full-height">
+              <div class="griddemo__col">Auto</div>
+            </div>
+            <div class="col full-height">
+              <div class="griddemo__col">Auto</div>
+            </div>
+          </div>
+        </div>
+<pre class="griddemo__pre">
+<code>
+&lt;div class="row"&gt;
+  &lt;div class="col-two-thirds"&gt;.col-two-thirds&lt;/div&gt;
+  &lt;div class="col"&gt;Auto&lt;/div&gt;
+  &lt;div class="col"&gt;Auto&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+      </section>
+
+      <section class="section">
+        <h3 class="section__title">Responsive</h3>
+        <p class="section__info">Columns work on mobile by default. If you want columns to be full width (stacked) at tablet onwards then change <code class="code">.row</code> to <code class="code">.row-tablet</code>. For example, the below columns should be full width until resized above 48rem. Resize your browser to see it in ACTION!</p>
+        
+        <div class="griddemo">
+          <div class="row-tablet">
+            <div class="col-half">
+              <div class="griddemo__col">.row-tablet / .col-half</div>
+            </div>
+            <div class="col-half">
+              <div class="griddemo__col">.row-tablet / .col-half</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="section__info">Again, if you only want columns on desktop (or wide-desktop), you can use either <code class="code">.row-desktop</code> or <code class="code">.row-wide-destkop</code>.</p>
+
+        <div class="griddemo">
+          <div class="row-desktop">
+            <div class="col-one-third">
+              <div class="griddemo__col">.row-desktop / .col-one-third</div>
+            </div>
+            <div class="col">
+              <div class="griddemo__col">.row-desktop / Auto</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 class="section__title">Nesting</h3>
+
+        <p class="section__info">Rows can be nested within other columns infinitely.</p>
+
+        <div class="griddemo">
+          <div class="row">
+            <div class="col">
+              <div class="griddemo__col">First</div>
+              <div class="row">
+                <div class="col">
+                  <div class="griddemo__col">Nested</div>
+                </div>
+                <div class="col">
+                  <div class="griddemo__col">Nested</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section>
-        <h3>Alignment</h3>
-        <p>Columns can be aligned with the use of <strong>.align-top</strong>, <strong>.align-bottom</strong> and <strong>.align-center</strong>.</p>
+      <section class="section">
+        <h3 class="section__title">Alignment</h3>
 
-        <div class="row">
-          <div class="col align-top">
-            <div class="info">The column is top-aligned</div>
-          </div>
-          <div class="col">
-            <div class="info">Pellentesque in vehicula velit. Nam odio elit, tristique in consequat a, eleifend sed augue. Maecenas malesuada mollis odio, sit amet pretium tortor accumsan aliquam.</div>
-          </div>
-          <div class="col align-center">
-            <div class="info">The column is top-aligned</div>
-          </div>
-          <div class="col align-bottom">
-            <div class="info">The column is top-aligned</div>
+        <p class="section__info">Columns can be aligned with the use of <code class="code">.align-top</code>, <code class="code">.align-bottom</code> and <code class="code">.align-center</code>.</p>
+
+        <div class="griddemo">
+          <div class="row">
+            <div class="col align-top">
+              <div class="griddemo__col">The column is top-aligned</div>
+            </div>
+            <div class="col">
+              <div class="griddemo__col">Pellentesque in vehicula velit. Nam odio elit, tristique in consequat a, eleifend sed augue. Maecenas malesuada mollis odio, sit amet pretium tortor accumsan aliquam.</div>
+            </div>
+            <div class="col align-center">
+              <div class="griddemo__col">The column is top-aligned</div>
+            </div>
+            <div class="col align-bottom">
+              <div class="griddemo__col">The column is top-aligned</div>
+            </div>
           </div>
         </div>
       </section>
-
-      <section>
-        <p>You can view the <a href="">full source</a> of this demo at Github.</p>
+      
+      <section class="section">
+        <p class="section__info">You can view the full <a href="/">source</a> for this grid demo on Github.</p>
       </section>
     </div>
   </main>
 
-  <footer>
-    <div class="container-fluid">
-      <p>Created by Marko Djordjevic.</p>
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__info">Created by <a href="/">Marko Djordjevic</a></p>
     </div>
   </footer>
 </body>

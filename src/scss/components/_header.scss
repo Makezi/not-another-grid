@@ -1,0 +1,33 @@
+.header {
+  background-color: $dark-bluetint;
+  color: $light-white;
+  padding: 1.25rem 0;
+
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+
+    @include tablet {
+      font-size: 2.5rem;
+      text-align: left;
+      padding-left: 1rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 0.25rem;
+
+    @include tablet {
+      font-size: 1.025rem;
+      text-align: left;
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  @include tablet {
+    padding: 1.75rem 0;
+  }
+}
