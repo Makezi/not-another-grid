@@ -1,9 +1,8 @@
 @mixin row {
   display: flex;
-  // flex-wrap: wrap;
 
   > .col:not(:last-child) {
-    margin-right: $gutter;
+    margin-right: $gutter / 2;
   }
 }
 
@@ -31,7 +30,7 @@
 
 .col {
   flex: 1;
-  margin-bottom: $gutter;
+  margin-bottom: $gutter / 2;
 
   &.full-height > * {
     height: 100%;
