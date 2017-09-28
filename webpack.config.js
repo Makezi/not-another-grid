@@ -70,7 +70,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'scss-babel-webpack boilerplate',
-      template: 'src/index.html',
+      template: 'index.html',
       minify: {
         collapseWhitespace: inProduction
       },
@@ -89,7 +89,7 @@ module.exports = {
       dry: false
     }),
     new PurifyCSSPlugin({
-      paths: glob.sync(path.join(__dirname, 'src/*.html'))
+      paths: glob.sync(path.join(__dirname, '*.html'))
     })
   ]
 }
